@@ -22,7 +22,7 @@ const Header = () => {
           to="/"
           className={`m-4 text-[14px] sm:text-[16px] ${
             path === "/" ? "opacity-100" : "opacity-30"
-          } hover:opacity-50 text-white`}
+          } text-white`}
         >
           Home
         </Link>
@@ -30,7 +30,7 @@ const Header = () => {
           to="/about"
           className={`m-4 text-[14px] sm:text-[16px] ${
             path === "/about" ? "opacity-100" : "opacity-30"
-          } hover:opacity-50 text-white`}
+          } text-white`}
         >
           About
         </Link>

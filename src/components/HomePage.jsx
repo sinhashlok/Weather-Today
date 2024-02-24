@@ -7,7 +7,7 @@ const HomePage = () => {
   const darkMode = useSelector((state) => state.dark.dark);
   const city = weather.location?.city;
   return (
-    <div className={`${darkMode ? "bg-[#312F2F]" : "bg-[#EDE6E3]"} h-screen`}>
+    <div className={`${darkMode ? "bg-[#312F2F]" : "bg-[#EDE6E3]"} h-[1000px]`}>
       <Search />
       {city !== null && <Body />}
     </div>
