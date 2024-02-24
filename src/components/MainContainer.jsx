@@ -19,7 +19,7 @@ const MainContainer = () => {
   return (
     <div className="mt-9 flex flex-col items-center">
       <h1
-        className={`text-6xl font-semibold ${
+        className={`text-4xl lg:text-6xl font-semibold ${
           darkMode ? "text-white" : "text-black"
         }`}
       >

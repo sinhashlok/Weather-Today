@@ -7,7 +7,11 @@ const SecondaryContainer = () => {
 
   const forecastList = forecast.forecast;
   return (
-    <div className={`mt-14 w-[60%] mx-auto border-4 p-2 ${darkMode ? "border-white" : "border-black"} bg-[#F06449] rounded-xl`}>
+    <div
+      className={`mt-14 w-[90%] md:w-[60%] mx-auto border-4 p-2 ${
+        darkMode ? "border-white" : "border-black"
+      } bg-[#F06449] rounded-xl`}
+    >
       <div className="flex overflow-x-scroll">
         <div className="flex">
           {forecastList?.map((data, index) => {

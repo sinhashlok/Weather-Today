@@ -15,19 +15,21 @@ const Header = () => {
   return (
     <div className="bg-[#F06449] text-center p-4">
       <div>
-        <h1 className="p-2 text-[24px] font-medium">WeatherToday</h1>
+        <h1 className="p-2 text-[18px] sm:text-[20px] md:text-[24px] font-medium">
+          WeatherToday
+        </h1>
         <Link
           to="/"
-          className={`m-4 text-[16px] ${
-            path === "/" ? "opacity-80" : "opacity-30"
+          className={`m-4 text-[14px] sm:text-[16px] ${
+            path === "/" ? "opacity-100" : "opacity-30"
           } hover:opacity-50 text-white`}
         >
           Home
         </Link>
         <Link
           to="/about"
-          className={`m-4 text-[16px] ${
-            path === "/about" ? "opacity-80" : "opacity-30"
+          className={`m-4 text-[14px] sm:text-[16px] ${
+            path === "/about" ? "opacity-100" : "opacity-30"
           } hover:opacity-50 text-white`}
         >
           About
@@ -41,16 +43,6 @@ const Header = () => {
         onChange={handleDarkMode}
         size={40}
       />
-      {/* <button
-        className={`absolute right-0 top-8 mr-10 border-2 p-2 ${
-          darkMode
-            ? "border-black bg-white text-black"
-            : "border-white bg-black text-white"
-        } font-semibold rounded-lg`}
-        onClick={handleDarkMode}
-      >
-        {darkMode ? "Light" : "Dark"} Mode
-      </button> */}
     </div>
   );
 };
