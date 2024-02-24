@@ -4,7 +4,6 @@ import { Provider } from "react-redux";
 import Header from "./components/Header";
 import HomePage from "./components/HomePage";
 import About from "./components/About";
-import Contact from "./components/Contact";
 import appStore from "./utils/store/appStore";
 
 const AppLayout = () => {
@@ -30,10 +29,6 @@ const appRouter = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
-      },
-      {
-        path: "/contact",
-        element: <Contact />,
       },
     ],
   },

@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import { setDark } from "../utils/store/darkSlice";
+import { DarkModeSwitch } from "react-toggle-dark-mode";
 
 const Header = () => {
   const path = useLocation().pathname;
@@ -31,16 +32,16 @@ const Header = () => {
         >
           About
         </Link>
-        <Link
-          to="/contact"
-          className={`m-4 text-[16px] ${
-            path === "/contact" ? "opacity-80" : "opacity-30"
-          } hover:opacity-50 text-white`}
-        >
-          Contact
-        </Link>
       </div>
-      <button
+      <DarkModeSwitch
+        className={`absolute right-0 top-8 mr-10
+        ${darkMode ? "text-black" : "text-white"}`}
+        style={{ marginBottom: "2rem" }}
+        checked={darkMode}
+        onChange={handleDarkMode}
+        size={40}
+      />
+      {/* <button
         className={`absolute right-0 top-8 mr-10 border-2 p-2 ${
           darkMode
             ? "border-black bg-white text-black"
@@ -49,7 +50,7 @@ const Header = () => {
         onClick={handleDarkMode}
       >
         {darkMode ? "Light" : "Dark"} Mode
-      </button>
+      </button> */}
     </div>
   );
 };
